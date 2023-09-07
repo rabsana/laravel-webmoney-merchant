@@ -1,0 +1,52 @@
+{
+    "name": "rabsana/laravel-webmoney-merchant",
+    "description": "WebMoneyMerchant payments for Laravel",
+    "keywords": [
+        "laravel-webmoney-merchant",
+        "webmoney-merchant",
+        "payments"
+    ],
+    "homepage": "https://github.com/rabsana/laravel-webmoney-merchant",
+    "license": "MIT",
+    "authors": [{
+        "name": "Sajjad Sisakhti",
+        "email": "sajjad.30sakhti@gmail.com",
+        "homepage": "https://rabsana.ir"
+    }],
+    "require": {
+        "php": ">=5.6.4",
+        "laravel/framework": "^8.12",
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.7",
+        "phpunit/phpunit": "^9.3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "ActionM\\WebMoneyMerchant\\Facades\\": "src/Facades",
+            "ActionM\\WebMoneyMerchant\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ActionM\\WebMoneyMerchant\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ActionM\\WebMoneyMerchant\\WebMoneyMerchantServiceProvider"
+            ],
+            "aliases": {
+                "WebMoneyMerchant": "ActionM\\WebMoneyMerchant\\Facades\\WebMoneyMerchant"
+            }
+        }
+    }
+}
